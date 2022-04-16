@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+  color: white;
+ }
+main{
+  background-image: linear-gradient(to bottom, rgba(53,53,53,1) 20%, rgba(255, 0, 0, 0.7));
+  min-height: 100vh;
+}
+.nav{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding-top: 2%;
+}
+h2{
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-left: 2%;
+}
+h2 span{
+  color: rgba(240, 5, 5, 0.8);
+}
+.nav ul{
+ width: 100%;
+ display: flex;
+}
+.nav ul li{
+  margin: 0 8%;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+.navbtn::after{
+  content: "";
+  position: absolute;
+  background: white;
+  width: 0px;
+  height: 2px;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.navbtn:hover::after{
+  width: 100%;
+}
+
+.main{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.main h4{
+  margin-bottom: 5%;
+  font-size: 25px;
+}
+.main h1{
+  margin-bottom: 10%;
+  font-size: 72px;
+  letter-spacing: 2px;
+}
+.main span{
+  color: rgba(240, 5, 5, 0.8);
+}
+.main h3{
+  border-right: 2px solid white;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dynamic{
+  animation: type 2s steps(20) 3s 1 normal both,
+  blinkTextCursor 500ms steps(20) infinite normal;
+}
+/*--------------------------------------------animations----------------------------*/
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 39rem;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+.main-pic{
+  width: 50%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.7;
+}
+.about{
+  text-align: center;
+  padding-top: 20%;
+  background-color: #2D2D2D;
+}
+.about h2{
+  font-size: 48px;
+  margin-bottom: 3%;
+  letter-spacing: 2px;
+}
+.about p{
+  width: 60%;
+  margin: auto;
+  text-align: justify;
+}
+#services{
+  text-align: center;
+  padding-top: 20%;
+  background-color: #2D2D2D;
+}
+#services h2{
+  font-size: 48px;
+  margin-bottom: 3%;
+  letter-spacing: 2px;
+}
+.cards{
+  display: flex;
+}
+.car h3{
+  margin: 20px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.car p{
+  background-image: linear-gradient(to bottom, rgba(53,53,53,1) 15%, rgba(240, 5, 5, 0.6));
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 18px;
+  padding: 10px;
+  box-shadow: 4px 4px 7px rgba(255, 255, 255, 0.5);
+  transition: 200ms ease-in-out;
+  min-height: 250px;
+}
+.car p:hover{
+  transform:scale(1.05);
+}
+.car{
+  position: relative;
+  width: 25%;
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+}
+.title-pic{
+  height: 30%;
+  width: 75%;
+}
+.car a{
+  position: relative;
+  display: inline-block;
+  padding: 10px 35px;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  margin-top: 35px;
+  transition: 200ms ease-in-out;
+}
+.car a span{
+  font-weight: 600;
+}
+.car a:hover{
+  background-color: rgb(39, 39, 39);
+  color: rgba(240, 5, 5);
+}
+.fadeInLeft{
+  -webkit-animation: fadeInLeft 1.8s both;
+  -moz-animation: fadeInLeft 1.8s both;
+  -o-animation: fadeInLeft 1.8s both;
+  animation: fadeInLeft 1.8s both;
+}
+.fadeInTop{
+  -webkit-animation: fadeInTop 1.8s both;
+  -moz-animation: fadeInTop 1.8s both;
+  -o-animation: fadeInTop 1.8s both;
+  animation: fadeInTop 1.8s both;
+}
+.fadeInRight{
+  -webkit-animation: fadeInRight 1.8s both;
+  -moz-animation: fadeInRight 1.8s both;
+  -o-animation: fadeInRight 1.8s both;
+  animation: fadeInRight 1.8s both;
+}
+/*---------------------------------------------------------fade in left animation------------------------------------------*/
+@-webkit-keyframes fadeInLeft{
+0%{
+  opacity: 0;
+  -webkit-transform: translateX(-50px);
+}
+100%{
+  opacity: 1;
+  -webkit-transform: translateX(0);
+}
+}
+@-moz-keyframes fadeInLeft{
+  0%{
+    opacity: 0;
+    -moz-transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+@-o-keyframes fadeInLeft{
+  0%{
+    opacity: 0;
+    -o-transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*----------------------------------------------fade in top animation--------------------------------------------------*/
+@-webkit-keyframes fadeInTop{
+  0%{
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  }
+  @-moz-keyframes fadeInTop{
+    0%{
+      opacity: 0;
+      -moz-transform: translateY(-50px);
+    }
+    100%{
+      opacity: 1;
+      -moz-transform: translateY(0);
+    }
+  }
+  @-o-keyframes fadeInTop{
+    0%{
+      opacity: 0;
+      -o-transform: translateY(-50px);
+    }
+    100%{
+      opacity: 1;
+      -o-transform: translateY(0);
+    }
+  }
+  @keyframes fadeInTop{
+    0%{
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/*-------------------------------------------------------------fade in right animation----------------------------------------*/
+@-webkit-keyframes fadeInRight{
+  0%{
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  }
+  @-moz-keyframes fadeInRight{
+    0%{
+      opacity: 0;
+      -moz-transform: translateX(50px);
+    }
+    100%{
+      opacity: 1;
+      -moz-transform: translateX(0);
+    }
+  }
+  @-o-keyframes fadeInRight{
+    0%{
+      opacity: 0;
+      -o-transform: translateX(50px);
+    }
+    100%{
+      opacity: 1;
+      -o-transform: translateX(0);
+    }
+  }
+  @keyframes fadeInRight{
+    0%{
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+#skills{
+  text-align: center;
+  padding-top: 20%;
+  background-color: #2D2D2D;
+}
+#skills h2{
+  font-size: 48px;
+  margin-bottom: 3%;
+  letter-spacing: 2px;
+}
+.container img{
+  width: 15%;
+  height: 15%;
+  margin: 4% 4%;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 500ms ease-in-out;
+}
+.container img:hover{
+  box-shadow: 10px 10px 13px rgba(240, 5, 5, 0.6), -10px -10px 13px rgba(240, 5, 5, 0.6),
+  25px 25px 70px rgba(255, 255, 255, 0.6), -25px -25px 70px rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+#contact{
+  text-align: center;
+  padding-top: 5%;
+  background-image: linear-gradient(to top, rgba(53,53,53,1) 25%, rgba(255, 0, 0, 0.7));
+}
+#contact h2{
+  font-size: 48px;
+  margin-bottom: 3%;
+  letter-spacing: 2px;
+}
+input{
+  display: block;
+  margin: auto;
+}
+input:first-child, input:nth-child(2){
+  width: 20%;
+  height: 30px;
+  border: 0;
+  margin-bottom: 1%;
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  /* box-shadow: 4px 4px 20px 2px rgba(255, 255, 255, 0.6), -4px -4px 20px 2px rgba(255, 255, 255, 0.6); */
+}
+textarea{
+  width: 40%;
+  height: 150px;
+  border: 0;
+  display: block;
+  margin: auto;
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin-bottom: 1%;
+}
+textarea::placeholder, input::placeholder{
+  padding-left: 5px;
+  padding-top: 5px;
+}
+button{
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgba(240, 5, 5, 0.6);
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 10%;
+  transition: 0.2s ease-in-out;
+}
+button:hover{
+  background-color: white;
+  color: red;
+
+}
+.social{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.social .btn{
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  margin: 0 5px;
+  background-color:white;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.social .btn:hover{
+  width: 150px;
+}
+.social .btn .icon{
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 55px;
+  color: black;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.social .btn:nth-child(2):hover .icon a{
+  color: #4267B2;
+}
+.social .btn:nth-child(3):hover .icon a{
+  color: #8a3ab9;
+}
+.social .btn:nth-child(4):hover .icon a{
+  color: #25D366;
+}
+.social .btn:nth-child(5):hover .icon a{
+  color: #0A66C2;
+}
+.social .btn:nth-child(6):hover .icon a{
+  color: #2AABEE;
+}
+.social .btn .icon i{
+  font-size: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social .btn span{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 45px;
+  margin-left: 10px;
+  color: black;
+}
+.social .btn .icon a{
+  color: black;
+}
+.social span:nth-child(1){
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*------------------------------------------medium width----------------------------------------------*/
+@media (max-width: 992px) and (min-width: 765px){
+  .nav ul li{
+  margin: 0 6%;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-pic{
+  width: 50%;
+  height: auto;
+}
+.main h4{
+  margin-bottom: 5%;
+  font-size: 22px;
+}
+.main h1{
+  margin-bottom: 10%;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+.main h3{
+  border-right: 2px solid white;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+}
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 31rem;
+  }
+}
+.car h3{
+  margin: 20px 0;
+  font-size: 16px;
+}
+.car p{
+  background-image: linear-gradient(to bottom, rgba(53,53,53,1) 15%, rgba(240, 5, 5, 0.6));
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 14px;
+  padding: 10px;
+  box-shadow: 4px 4px 7px rgba(255, 255, 255, 0.5);
+  transition: 200ms ease-in-out;
+  min-height: 200px;
+}
+.car{
+  position: relative;
+  width: 25%;
+  margin-right: 1.5%;
+  margin-left: 1.5%;
+}
+.title-pic{
+  height: 20%;
+  width: 50%;
+}
+.car a{
+  margin-top: 20px;
+}
+}
+
+/*----------------------------------------------------------small sizes--------------------------*/
+@media (max-width: 764px) and (min-width: 616px){
+  .nav ul li{
+  margin: 0 5%;
+  font-size: 15px;
+}
+.main h3{
+  font-size: 16px;
+}
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 33rem;
+  }
+}
+.cards{
+  display: block;
+}
+.car{
+  margin: auto;
+  padding-bottom: 10%;
+  width: 50%;
+}
+}
+.social span:nth-child(1){
+  font-size: 12px;
+}
+
+/*---------------------------------------------------------------mobiles widthes---------------------------------*/
+@media (max-width: 615px){
+  .nav ul li{
+    margin: 0 4%;
+    font-size: 12px;
+  }
+  h2{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 2%;
+  }
+  .main{
+    left: 5%;
+  }
+  .main h4{
+    margin-bottom: 5%;
+    font-size: 20px;
+  }
+  .main h1{
+    margin-bottom: 10%;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+  .main h3{
+    border-right: 2px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 10px;
+  }
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 21rem;
+    }
+  }
+  .main-pic{
+    width: 80%;
+    height: auto;
+  }
+  .cards{
+    display: block;
+  }
+  .car{
+    margin: auto;
+    padding-bottom: 10%;
+    width: 50%;
+  }
+  textarea::placeholder, input::placeholder{
+    padding-left: 4px;
+    padding-top: 4px;
+    font-size: 10px;
+  }
+  .social span:nth-child(1){
+    font-size: 12px;
+  }
+}
